@@ -41,6 +41,26 @@ class LinkedList {
                 
         }
 
+        int get(int index) {
+            Node* current = head;
+            int count = 0;
+            while (current != nullptr) {
+                if (count == index) return current->value;
+                current = current->next;
+                count++;
+            }
+            return -1; // Or throw an out-of-range error
+        }
+
+        void print() {
+            Node* current = head;
+            while (current != nullptr) {
+                std::cout << current->value << " -> ";
+                current = current->next;
+            }
+            std::cout << "nullptr" << std::endl;
+        }
+
 
 
 };
