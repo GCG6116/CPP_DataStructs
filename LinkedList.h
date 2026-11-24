@@ -5,24 +5,32 @@
 
 struct Node {
     int value;
-    int* next;
+    Node* next; //points to the next node
+
+    Node(int val) : value(val), next(nullptr){} //constructor for creating a new node 
+
 };
 
 class LinkedList {
     private:
-        Node firstNode;
+        Node* head; //points to the first node
 
     public:
 
         LinkedList(){
-            firstNode.value = NULL;
-            firstNode.next = nullptr;
+            head = nullptr;
         }
 
         void add(int value){
-            while (true){
-                
+            Node* newNode = new Node(value); //new node to be added
+
+            //case 1: the list is empty 
+            if (head == nullptr){
+                head = newNode;
+                return;
             }
+            
+                
         }
 
 
