@@ -29,7 +29,15 @@ class LinkedList {
                 head = newNode;
                 return;
             }
+
+            //case 2: traverse the linked list until we reach the last node
+            Node* current = head; //first node in linked list
+            while (current ->next != nullptr){ //goes through until the point is null
+                current = current -> next; //sets current to the pointer in the Node, which 
+                //the original pointer was pointing too
+            }
             
+            current ->next = newNode; //attach the new node to the end (whichever pointer was null)
                 
         }
 
