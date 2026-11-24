@@ -21,7 +21,7 @@ class LinkedList {
             head = nullptr;
         }
 
-        void add(int value){
+        void Add(int value){
             Node* newNode = new Node(value); //new node to be added
 
             //case 1: the list is empty 
